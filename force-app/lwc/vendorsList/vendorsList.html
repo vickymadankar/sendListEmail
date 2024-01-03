@@ -1,0 +1,15 @@
+<!-- VendorList.html -->
+<template>
+    <lightning-card title="Vendor List" icon-name="standard:channel">
+        <lightning-button label="Send Email" variant="brand" onclick={openEmailModal}></lightning-button>   
+         <c-send-email-l-w-c selected-clients={selectedClients} 
+         is-modal-open={isModalOpen}
+         ></c-send-email-l-w-c> 
+        <lightning-datatable
+            key-field="Id"
+            data={vendors}
+            columns={columns}
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>     
+    </lightning-card>
+</template>
